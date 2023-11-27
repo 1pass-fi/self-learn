@@ -1,8 +1,36 @@
-fn main() {
-    for number in (4..1).rev() {
-        println!("{number}");
+fn convert_to_celsius(fa: f64) -> f64 {
+    (fa * 9.0/5.0) + 32.0
+}
+
+fn convert_to_fahrenheit(ce: f64) -> f64 {
+    (ce - 32.0) * 5.0/9.0
+}
+
+fn fibo(n: u32) -> u32 {
+    if n == 0 || n == 1{
+        1
     }
-    println!("liftoff");
+    else {
+        fibo(n-1) + fibo(n-2)
+    }
+}
+
+fn write_chrismas(n: u32) {
+    for _ in 1..n {
+        println!("Sing a song");
+    }
+}
+
+fn main() {
+    let temp = 54.0;
+    println!("{}", convert_to_celsius(temp));
+    println!("{}", convert_to_fahrenheit(temp));
+    println!("fibo: {}", fibo(5));
+    write_chrismas(12);
+    // for number in (4..1).rev() {
+    //     println!("{number}");
+    // }
+    // println!("liftoff");
     // let a = [10, 20, 30, 40, 50];
     // for element in a {
     //     println!("value is: {element}");
