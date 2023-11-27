@@ -1,10 +1,19 @@
-fn no_dangle() -> String {
-    let s = String::from("hello");
-    s
-}
 fn main() {
-    let m = no_dangle();
-    println!("{}", m);
+    let a = [1, 2, 3, 4, 5];
+
+    let slice = &a[1..3];
+
+    assert_eq!(slice, &[2, 3]);
+    // let s = String::from("hello world");
+    // println!("{}", first_word(&s));
+    // let (len1, len2) = split(s);
+    // println!("{}, {}", len1, len2);
+    // let mut str = String::from("hello world");
+    // println!("{}", first_word(&str));
+    // str.clear();
+    // println!("{}", str);
+    // let m = no_dangle();
+    // println!("{}", m);
     // let mut s = String::from("hello");
     // let _r1 = &s;
     // let _r2 = &s;
@@ -210,4 +219,33 @@ fn main() {
 
 // fn change(s: &mut String) {
 //     s.push_str(", world");
+// }
+
+// fn no_dangle() -> String {
+//     let s = String::from("hello");
+//     s
+// }
+
+// fn first_word(s: &String) -> usize {
+//     let bytes = s.as_bytes();
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return i;
+//         }
+//     }
+//     s.len()
+// }
+// fn split(s: String) -> (usize, usize) {
+//     let hello = &s[0..2];
+//     let world = &s[..s.len()];
+//     (hello.len(), world.len())
+// }
+// fn first_word(s: &String) -> &str {
+//     let bytes = s.as_bytes();
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return &s[0..i];
+//         }
+//     }
+//     &s[..]
 // }
