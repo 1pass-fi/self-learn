@@ -1,43 +1,60 @@
-use std::io;
+fn another_function(x: i32, y: char) {
+    println!("Another function {x}{y}");
+}
+
+fn five(x: i32) -> i32 {
+    1 + x + 1
+}
 
 fn main() {
-    let t = true;
-    let t2 = false;
-    let f: bool = false;
-    println!("Boolean values: {}, {f}, {}", t, t2);
+    println!("hello, world");
+    another_function(2, 'z');
 
-    let c = 'z';
-    let z: char = 'Z';
-    let heart_eyed_cat = '😻';
-    println!("Chars: {}, {z}, {}", c, heart_eyed_cat);
+    let x = {
+        let y = 6;
+        y + 1
+    };
+    println!("{}", x);
 
-    let tup: (i32, f64, u8) = (500, 6.4, 1);
-    let (x, y, z) = tup;
-    println!("Tuples: {}, {}, {}", x, y, z);
-    println!("Tuples: {}", tup.1);
+    let x = five(3);
+    println!("The return value: {}", x);
+    // let t = true;
+    // let t2 = false;
+    // let f: bool = false;
+    // println!("Boolean values: {}, {f}, {}", t, t2);
 
-    let a = [1, 2, 3, 4, 5];
-    let months = ["Jan", "Feb", "Mar", "...", "Dec"];
-    println!("Array: {}, {}", a[0], months[1]);
+    // let c = 'z';
+    // let z: char = 'Z';
+    // let heart_eyed_cat = '😻';
+    // println!("Chars: {}, {z}, {}", c, heart_eyed_cat);
 
-    let a: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("Array: {}, {}", a[0], a[3]);
+    // let tup: (i32, f64, u8) = (500, 6.4, 1);
+    // let (x, y, z) = tup;
+    // println!("Tuples: {}, {}, {}", x, y, z);
+    // println!("Tuples: {}", tup.1);
 
-    let a = [3; 5];
-    println!("Array: {}, {}", a[2], a[4]);
+    // let a = [1, 2, 3, 4, 5];
+    // let months = ["Jan", "Feb", "Mar", "...", "Dec"];
+    // println!("Array: {}, {}", a[0], months[1]);
 
-    let a = [1, 2, 3, 4, 5];
-    println!("Please enter an index number");
-    let mut index = String::new();
-    io::stdin()
-        .read_line(&mut index)
-        .expect("Failed to read line");
-    let index: usize = index
-        .trim()
-        .parse()
-        .expect("Index entered was not a number");
-    let element = a[index];
-    println!("The value of the element at index {index} is : {}", element);
+    // let a: [i32; 5] = [1, 2, 3, 4, 5];
+    // println!("Array: {}, {}", a[0], a[3]);
+
+    // let a = [3; 5];
+    // println!("Array: {}, {}", a[2], a[4]);
+
+    // let a = [1, 2, 3, 4, 5];
+    // println!("Please enter an index number");
+    // let mut index = String::new();
+    // io::stdin()
+    //     .read_line(&mut index)
+    //     .expect("Failed to read line");
+    // let index: usize = index
+    //     .trim()
+    //     .parse()
+    //     .expect("Index entered was not a number");
+    // let element = a[index];
+    // println!("The value of the element at index {index} is : {}", element);
 
     // let spaces = "  ";
     // let spaces = spaces.len();
