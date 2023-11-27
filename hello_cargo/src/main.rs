@@ -3,6 +3,16 @@ fn main() {
     let t2 = false;
     let f: bool = false;
     println!("Boolean values: {}, {f}, {}", t, t2);
+
+    let c = 'z';
+    let z: char = 'Z';
+    let heart_eyed_cat = '😻';
+    println!("Chars: {}, {z}, {}", c, heart_eyed_cat);
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("Tuples: {}, {}, {}", x, y, z)
+
     // let spaces = "  ";
     // let spaces = spaces.len();
     // println!("Length: {}", spaces);
