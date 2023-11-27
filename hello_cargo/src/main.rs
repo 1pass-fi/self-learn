@@ -1,32 +1,19 @@
-fn convert_to_celsius(fa: f64) -> f64 {
-    (fa * 9.0/5.0) + 32.0
+fn calculate_length(s: String) -> (String, usize) {
+    let le = s.len();
+    (s, le)
 }
-
-fn convert_to_fahrenheit(ce: f64) -> f64 {
-    (ce - 32.0) * 5.0/9.0
-}
-
-fn fibo(n: u32) -> u32 {
-    if n == 0 || n == 1{
-        1
-    }
-    else {
-        fibo(n-1) + fibo(n-2)
-    }
-}
-
-fn write_chrismas(n: u32) {
-    for _ in 1..n {
-        println!("Sing a song");
-    }
-}
-
 fn main() {
-    let temp = 54.0;
-    println!("{}", convert_to_celsius(temp));
-    println!("{}", convert_to_fahrenheit(temp));
-    println!("fibo: {}", fibo(5));
-    write_chrismas(12);
+    let str = String::from("hello");
+    let (len, newstr) = calculate_length(str);
+    println!("{}, {}", len, newstr);
+    // let s1 = String::from("hello");
+    // let s2 = s1.clone();
+    // println!("{}", s1);
+    // let temp = 54.0;
+    // println!("{}", convert_to_celsius(temp));
+    // println!("{}", convert_to_fahrenheit(temp));
+    // println!("fibo: {}", fibo(5));
+    // write_chrismas(12);
     // for number in (4..1).rev() {
     //     println!("{number}");
     // }
@@ -180,4 +167,27 @@ fn main() {
 
 // fn five(x: i32) -> i32 {
 //     1 + x + 1
+// }
+
+// fn convert_to_celsius(fa: f64) -> f64 {
+//     (fa * 9.0/5.0) + 32.0
+// }
+
+// fn convert_to_fahrenheit(ce: f64) -> f64 {
+//     (ce - 32.0) * 5.0/9.0
+// }
+
+// fn fibo(n: u32) -> u32 {
+//     if n == 0 || n == 1{
+//         1
+//     }
+//     else {
+//         fibo(n-1) + fibo(n-2)
+//     }
+// }
+
+// fn write_chrismas(n: u32) {
+//     for _ in 1..n {
+//         println!("Sing a song");
+//     }
 // }
