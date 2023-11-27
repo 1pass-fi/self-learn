@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     let t = true;
     let t2 = false;
@@ -11,7 +13,31 @@ fn main() {
 
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (x, y, z) = tup;
-    println!("Tuples: {}, {}, {}", x, y, z)
+    println!("Tuples: {}, {}, {}", x, y, z);
+    println!("Tuples: {}", tup.1);
+
+    let a = [1, 2, 3, 4, 5];
+    let months = ["Jan", "Feb", "Mar", "...", "Dec"];
+    println!("Array: {}, {}", a[0], months[1]);
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("Array: {}, {}", a[0], a[3]);
+
+    let a = [3; 5];
+    println!("Array: {}, {}", a[2], a[4]);
+
+    let a = [1, 2, 3, 4, 5];
+    println!("Please enter an index number");
+    let mut index = String::new();
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+    let element = a[index];
+    println!("The value of the element at index {index} is : {}", element);
 
     // let spaces = "  ";
     // let spaces = spaces.len();
