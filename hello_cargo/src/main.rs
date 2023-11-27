@@ -1,11 +1,22 @@
-fn calculate_length(s: String) -> (String, usize) {
-    let le = s.len();
-    (s, le)
+fn no_dangle() -> String {
+    let s = String::from("hello");
+    s
 }
 fn main() {
-    let str = String::from("hello");
-    let (len, newstr) = calculate_length(str);
-    println!("{}, {}", len, newstr);
+    let m = no_dangle();
+    println!("{}", m);
+    // let mut s = String::from("hello");
+    // let _r1 = &s;
+    // let _r2 = &s;
+    // println!("{}, {}", _r1, _r2);
+    // let r3 = &mut s;
+    // println!("{}", r3);
+    // let mut s = String::from("hello");
+    // change(&mut s);
+    // println!("{}", s);
+    // let str = String::from("hello");
+    // let (len, newstr) = calculate_length(str);
+    // println!("{}, {}", len, newstr);
     // let s1 = String::from("hello");
     // let s2 = s1.clone();
     // println!("{}", s1);
@@ -190,4 +201,13 @@ fn main() {
 //     for _ in 1..n {
 //         println!("Sing a song");
 //     }
+// }
+
+// fn calculate_length(s: String) -> (String, usize) {
+//     let le = s.len();
+//     (s, le)
+// }
+
+// fn change(s: &mut String) {
+//     s.push_str(", world");
 // }
