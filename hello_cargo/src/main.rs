@@ -1,9 +1,29 @@
 fn main() {
-    let a = [1, 2, 3, 4, 5];
+    
+    // let user1 = User {
+    //     active: true,
+    //     username: "11",
+    //     email: "22",
+    //     sign_in_count: 1,
+    // };
+    // println!("{}", user1.email);
+    // let subject = AlwaysEqual;
+    // println!("{}", subject);
+    // let black = Color(0, 0, 0);
+    // let origin = Point(0, 0, 0);
+    // println!("({}, {}, {})", black.0, black.1, black.2);
+    // let user1 = build_user(String::from("1"), String::from("2"));
+    // let user2 = User {
+    //     email: String::from("3"),
+    //     ..user1
+    // };
+    // println!("{}", user1.email);
+    // println!("{}", user2.email);
+    // let a = [1, 2, 3, 4, 5];
 
-    let slice = &a[1..3];
+    // let slice = &a[1..3];
 
-    assert_eq!(slice, &[2, 3]);
+    // assert_eq!(slice, &[2, 3]);
     // let s = String::from("hello world");
     // println!("{}", first_word(&s));
     // let (len1, len2) = split(s);
@@ -248,4 +268,27 @@ fn main() {
 //         }
 //     }
 //     &s[..]
+// }
+// struct User {
+//     active: bool,
+//     username: String,
+//     email: String,
+//     sign_in_count: u64,
+// }
+// fn build_user(email: String, username: String) -> User {
+//     User {
+//         active: true,
+//         email,
+//         username,
+//         sign_in_count: 1,
+//     }
+// }
+// struct Color(i32, i32, i32);
+// struct Point(i32, i32, i32);
+// struct AlwaysEqual;
+// struct User<'a> {
+//     active: bool,
+//     username: &'a str,
+//     email: &'a str,
+//     sign_in_count: u64,
 // }
