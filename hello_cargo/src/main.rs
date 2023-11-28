@@ -1,5 +1,18 @@
 fn main() {
-    
+    // let scale = 2;
+    // let rect1 = Rectangle {
+    //     width: dbg!(30 * scale),
+    //     height: 50,
+    // };
+    // dbg!(&rect1);
+    // println!("{:?}", rect1);
+    // let rect1 = Rectangle {
+    //     width: 30,
+    //     height: 50,
+    // };
+    // println!("Size: {}", area(rect1));
+    // let rect1 = (30, 50);
+    // println!("Area size: {}", area(rect1));
     // let user1 = User {
     //     active: true,
     //     username: "11",
@@ -291,4 +304,19 @@ fn main() {
 //     username: &'a str,
 //     email: &'a str,
 //     sign_in_count: u64,
+// }
+// fn area(dimension: (u32, u32)) -> u32 {
+//     dimension.0 * dimension.1
+// }
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
+// fn area(r: Rectangle) -> u32 {
+//     r.width * r.height
+// }
+// # [derive(Debug)]
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
 // }
