@@ -1,4 +1,85 @@
+// enum Coin {
+//     Penny,
+//     Nickel,
+//     Dime, 
+//     Quater
+// }
+// fn value_in_cents(coin: Coin) -> u8 {
+//     match coin {
+//         Coin:: Penny => {
+//             println!("Lucky penny!");
+//             1
+//         },
+//         Coin::Nickel => 2,
+//         Coin::Dime => 10,
+//         Coin::Quater => 25,
+//     }
+// }
+// fn plus_one(x: Option<i32>) -> Option<i32> {
+//     match x {
+//         None => None,
+//         Some(i) => Some(i + 1),
+//     }
+// }
 fn main() {
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        other => move_player(other),
+    }
+
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
+    fn move_player(num_spaces: u8) {}
+
+    // let five = Some(5);
+    // let six = plus_one(five);
+    // let none = plus_one(None);
+    // dbg!(five);
+    // dbg!(six);
+    // dbg!(none);
+    // let t: T;
+    // let t = Coin
+    // value_in_cents()
+    // let x: i8 = 5;
+    // let y: Option<i8> = Some(5);
+    // let sum = x + y;
+    // println!("{}", sum);
+    // let some_number = Some(5);
+    // let some_char = Some('e');
+    // let absent_number: Option<i32> = Some(15);
+    // dbg!(some_number);
+    // dbg!(some_char);
+    // dbg!(absent_number);
+    // let home = IpAddrKind::V4(127, 0, 0, 1);
+    // let loopback = IpAddrKind::V6(String::from("::1"));
+    // println!("{}", home.call());
+    // let four = IpAddrKind::V4;
+    // let six = IpAddrKind::V6;
+    // route(IpAddrKind::V4);
+    // route(IpAddrKind::V6);
+    // let rect1 = Rectangle {
+    //     width: 30,
+    //     height: 50,
+    // };
+    // let rect2 = Rectangle {
+    //     width: 10,
+    //     height: 40,
+    // };
+    // let rect3 = Rectangle {
+    //     width: 60, 
+    //     height: 45,
+    // };
+    // println!("{}", rect1.can_hold(&rect2));
+    // println!("{}", rect1.can_hold(&rect3));
+    // let rect4 = Rectangle::square(5);
+    // println!("{}", rect4.area())
+    // let rect1 = Rectangle {
+    //     width: 30,
+    //     height: 50,
+    // };
+    // println!("size: {}, len: {}", rect1.area(), rect1.total());
     // let scale = 2;
     // let rect1 = Rectangle {
     //     width: dbg!(30 * scale),
@@ -319,4 +400,50 @@ fn main() {
 // struct Rectangle {
 //     width: u32,
 //     height: u32,
+// }
+// #[derive(Debug)]
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
+// impl Rectangle {
+//     fn area(&self) -> u32 {
+//         self.width * self.height
+//     }
+//     fn total(&self) -> u32 {
+//         2 * (self.width + self.height)
+//     }
+// }
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
+// impl Rectangle {
+//     fn can_hold(&self, other: &Rectangle) -> bool {
+//         self.width > other.width && self.height > other.height
+//     }
+//     fn area(&self) -> u32 {
+//         self.width * self.height
+//     }
+//     fn square(size: u32) -> Self {
+//         Self {
+//             width: size,
+//             height: size,
+//         }
+//     }
+// }
+// enum IpAddrKind {
+//     V4(u8, u8, u8, u8),
+//     V6(String),
+// }
+// impl IpAddrKind {
+//     fn call(&self) -> IpAddrKind{
+//         self
+//     }
+// }
+// fn route(ip_kind: IpAddrKind) {}
+// #[derive(Debug)]
+// enum Option<T> {
+//     None,
+//     Some(T),
 // }
