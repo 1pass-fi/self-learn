@@ -1,15 +1,36 @@
-mod back_of_house {
-    pub enum Appetizer {
-        Soup,
-        Salad,
-    }
-}
-pub fn eat_at_restaurant() {
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
-}
+// use rand::Rng;
 fn main() {
     
+    // let v: Vec<i32> = Vec::new();
+    // let v = vec![1, 2, 3];
+    // let mut v = Vec::new();
+    // v.push(5);
+    // v.push(6);
+    // v.push(7);
+    // let v = vec![1, 2, 3, 4, 5];
+    // let third: &i32 = &v[2];
+    // println!("The third element is {third}");
+    // let third: Option<&i32> = v.get(2);
+    // match third {
+    //     Some(third) => println!("The third element is {third}"),
+    //     none => println!("There is no third element"),
+    // }
+    // let v = vec![1, 2, 3, 4, 5];
+    // let does_not_exist = &v[100];
+    // let does_not_exist = v.get(100);
+    // let mut v = vec![1, 2, 3, 4, 5];
+    // let first = v[0];
+    // v.push(6);
+    // println!("{first}");
+    // let mut v = vec![100, 32, 57];
+    // for i in &mut v {
+    //     *i += 50;
+    // }
+    // println!("{:?}", v);
+
+    // eat_at_restaurant();
+    // let mut map = HashMap::new();
+    // map.insert(1, 2);
     // eat_at_restaurant();
     // let coin = Coin::Penny;
     // let mut count = 0;
@@ -511,3 +532,51 @@ fn main() {
 //     meal.toast = String::from("Wheat");
 //     println!("I'd like {} toast please", meal.toast);
 // }
+// mod back_of_house {
+//     pub enum Appetizer {
+//         Soup,
+//         Salad,
+//     }
+// }
+// pub fn eat_at_restaurant() {
+//     let order1 = back_of_house::Appetizer::Soup;
+//     let order2 = back_of_house::Appetizer::Salad;
+// }
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
+// use crate::front_of_house::hosting;
+// mod customer {
+//     pub fn eat_at_restaurant() {
+//         hosting::add_to_waitlist();
+//         // add_to_waitlist();
+//         // hosting::add_fancy_hat()
+//     }
+// }
+// use std::collections::HashMap;
+// use std::fmt;
+// use std::io;
+
+// fn function1() -> fmt::Result {
+//     // --snip--
+//     Ok(())
+// }
+
+// fn function2() -> io::Result<()> {
+//     // --snip--
+//     Ok(())
+// }
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
+// pub use crate::front_of_house::hosting;
+
+// pub fn eat_at_restaurant() {
+//     hosting::add_to_waitlist();
+// }
+// let secret_number = rand::thread_rng().gen_range(1..=100);
+// println!("{}", secret_number);
