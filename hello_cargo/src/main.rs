@@ -1,37 +1,37 @@
-// enum Coin {
-//     Penny,
-//     Nickel,
-//     Dime, 
-//     Quater
-// }
-// fn value_in_cents(coin: Coin) -> u8 {
-//     match coin {
-//         Coin:: Penny => {
-//             println!("Lucky penny!");
-//             1
-//         },
-//         Coin::Nickel => 2,
-//         Coin::Dime => 10,
-//         Coin::Quater => 25,
-//     }
-// }
-// fn plus_one(x: Option<i32>) -> Option<i32> {
-//     match x {
-//         None => None,
-//         Some(i) => Some(i + 1),
-//     }
-// }
-fn main() {
-    let dice_roll = 9;
-    match dice_roll {
-        3 => add_fancy_hat(),
-        7 => remove_fancy_hat(),
-        other => move_player(other),
+mod back_of_house {
+    pub enum Appetizer {
+        Soup,
+        Salad,
     }
+}
+pub fn eat_at_restaurant() {
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
+}
+fn main() {
+    
+    // eat_at_restaurant();
+    // let coin = Coin::Penny;
+    // let mut count = 0;
+    // if let Coin::Quater(state) = coin {
+    //     println!("State quater from {:?}", state);
+    // } else {
+    //     count += 1;
+    // }
+    // match coin {
+    //     Coin::Quater(state) => println!("State quater from {:?}", state),
+    //     _ => count += 1,
+    // }
+    // let dice_roll = 9;
+    // match dice_roll {
+    //     3 => add_fancy_hat(),
+    //     7 => remove_fancy_hat(),
+    //     other => move_player(other),
+    // }
 
-    fn add_fancy_hat() {}
-    fn remove_fancy_hat() {}
-    fn move_player(num_spaces: u8) {}
+    // fn add_fancy_hat() {}
+    // fn remove_fancy_hat() {}
+    // fn move_player(num_spaces: u8) {}
 
     // let five = Some(5);
     // let six = plus_one(five);
@@ -446,4 +446,68 @@ fn main() {
 // enum Option<T> {
 //     None,
 //     Some(T),
+// }
+// fn value_in_cents(coin: Coin) -> u8 {
+//     match coin {
+//         Coin:: Penny => {
+//             println!("Lucky penny!");
+//             1
+//         },
+//         Coin::Nickel => 2,
+//         Coin::Dime => 10,
+//         Coin::Quater => 25,
+//     }
+// }
+// fn plus_one(x: Option<i32>) -> Option<i32> {
+//     match x {
+//         None => None,
+//         Some(i) => Some(i + 1),
+//     }
+// }
+// #[derive(Debug)]
+// enum UsState {
+//     Alabama,
+//     Alaska,
+// }
+// enum Coin {
+//     Penny,
+//     Nickel,
+//     Dime, 
+//     Quater(UsState),
+// }
+// fn deliver_order() {}
+// mod back_of_house {
+//     fn fix_incorrect_order() {
+//         cook_order();
+//         super::deliver_order();
+//     }
+//     fn cook_order() {}
+// }
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
+// pub fn eat_at_restaurant() {
+//     crate::front_of_house::hosting::add_to_waitlist();
+//     front_of_house::hosting::add_to_waitlist();
+// }
+// mod back_of_house {
+//     pub struct Breakfast {
+//         pub toast: String,
+//         seasonal_fruit: String,
+//     }
+//     impl Breakfast {
+//         pub fn summer(toast: &str) -> Breakfast {
+//             Breakfast {
+//                 toast: String::from(toast),
+//                 seasonal_fruit: String::from("peaches"),
+//             }
+//         }
+//     }
+// }
+// pub fn eat_at_restaurant() {
+//     let mut meal = back_of_house::Breakfast::summer("Rye");
+//     meal.toast = String::from("Wheat");
+//     println!("I'd like {} toast please", meal.toast);
 // }
