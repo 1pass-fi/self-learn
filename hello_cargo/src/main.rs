@@ -1,6 +1,53 @@
 // use rand::Rng;
+fn gives_ownership() -> String {
+    let some_string = String::from("yours");
+    some_string
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+    a_string
+}
+
 fn main() {
-    
+    let s1 = gives_ownership();
+    let s2 = String::from("hello");
+    let s3 = takes_and_gives_back(s2);
+    println!("{}", s1);
+    println!("{}", s3);
+
+    // let s = String::from("hello");
+    // takes_ownership(s);
+    // let x = 5;
+    // makes_copy(x);
+
+    // let s1 = String::from("Hello, ");
+    // let s2 = String::from("world");
+    // let s3 = s1.clone() + &s2;
+    // println!("{}", s1);
+    // let data = "init";
+    // let mut s = data.to_string();
+    // let g = String::from("init");
+    // s.push_str("  a  ");
+    // s.push_str(&g);
+    // println!("s2 is {s}");
+    // dbg!(s);
+    // dbg!(g);
+    // {
+    //     let v = vec![1, 2, 3, 4];
+    //     println!("{}", v[0]);
+    // }
+    // enum SpreadsheetCell {
+    //     Int(i32),
+    //     Float(f64),
+    //     Text(String),
+    // }
+    // let row = vec![
+    //     SpreadsheetCell::Int(3),
+    //     SpreadsheetCell::Text(String::from("blue")),
+    //     SpreadsheetCell::Float(10.12),
+    // ];
+    // dbg!(row);
+    // println!("{:?}", row);
     // let v: Vec<i32> = Vec::new();
     // let v = vec![1, 2, 3];
     // let mut v = Vec::new();
@@ -580,3 +627,10 @@ fn main() {
 // }
 // let secret_number = rand::thread_rng().gen_range(1..=100);
 // println!("{}", secret_number);
+// fn takes_ownership(some_string: String) {
+//     println!("{}", some_string);
+// }
+
+// fn makes_copy(some_integer: i32) {
+//     println!("{}", some_integer);
+// }
