@@ -15,21 +15,24 @@
 // fn change(some_string: &mut String) {
 //     some_string.push_str(", world");
 // }
-fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return i;
-        }
-    }
-    s.len()
-}
+// fn first_word(s: &String) -> usize {
+//     let bytes = s.as_bytes();
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return i;
+//         }
+//     }
+//     s.len()
+// }
 
 fn main() {
-    let s = String::from("hello world");
-    let hello = &s[0..5];
-    let world = &s[6..11];
-    println!("{}, {}, {}", first_word(&s), hello, world);
+    let a = [1, 2, 3, 4, 5];
+    let slice = &a[1..3];
+    assert_eq!(slice, &[2, 3]);
+    // let s = String::from("hello world");
+    // let hello = &s[0..5];
+    // let world = &s[6..11];
+    // println!("{}, {}, {}", first_word(&s), hello, world);
     // let mut s = String::from("hello");
     // let r1 = &s;
     // let r2 = &s;
