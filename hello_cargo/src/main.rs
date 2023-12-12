@@ -24,11 +24,32 @@
 //     }
 //     s.len()
 // }
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u32
+}
+fn build_user(email: String, username: String) -> User {
+    User {
+        active: true,
+        username: username,
+        email: email,
+        sign_in_count: 1,
+    }
+}
 
 fn main() {
-    let a = [1, 2, 3, 4, 5];
-    let slice = &a[1..3];
-    assert_eq!(slice, &[2, 3]);
+    let user1 = build_user(String::from("a@a.com"), String::from("b"));
+    let user2 = User {
+        email: String::from("another@a.com"),
+        ..user1
+    };
+    println!("{}, {}", user1.active, user1.email);
+    println!("{}, {}", user2.email, user2.username);
+    // let a = [1, 2, 3, 4, 5];
+    // let slice = &a[1..3];
+    // assert_eq!(slice, &[2, 3]);
     // let s = String::from("hello world");
     // let hello = &s[0..5];
     // let world = &s[6..11];
