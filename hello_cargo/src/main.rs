@@ -24,29 +24,41 @@
 //     }
 //     s.len()
 // }
-struct User {
+// struct User {
+//     active: bool,
+//     username: String,
+//     email: String,
+//     sign_in_count: u32
+// }
+// fn build_user(email: String, username: String) -> User {
+//     User {
+//         active: true,
+//         username: username,
+//         email: email,
+//         sign_in_count: 1,
+//     }
+// }
+struct User<'a> {
     active: bool,
-    username: String,
-    email: String,
-    sign_in_count: u32
+    username: &'a str,
+    email: &'a str,
+    sign_in_count: u32,
 }
-fn build_user(email: String, username: String) -> User {
-    User {
-        active: true,
-        username: username,
-        email: email,
-        sign_in_count: 1,
-    }
-}
-
 fn main() {
-    let user1 = build_user(String::from("a@a.com"), String::from("b"));
-    let user2 = User {
-        email: String::from("another@a.com"),
-        ..user1
+    let user1 = User {
+        active: true,
+        username: "a",
+        email: "a@a.com",
+        sign_in_count: 1,
     };
-    println!("{}, {}", user1.active, user1.email);
-    println!("{}, {}", user2.email, user2.username);
+    println!("{}", user1.email);
+    // let user1 = build_user(String::from("a@a.com"), String::from("b"));
+    // let user2 = User {
+    //     email: String::from("another@a.com"),
+    //     ..user1
+    // };
+    // println!("{}, {}", user1.active, user1.email);
+    // println!("{}, {}", user2.email, user2.username);
     // let a = [1, 2, 3, 4, 5];
     // let slice = &a[1..3];
     // assert_eq!(slice, &[2, 3]);
