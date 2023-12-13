@@ -38,20 +38,36 @@
 //         sign_in_count: 1,
 //     }
 // }
-struct User<'a> {
-    active: bool,
-    username: &'a str,
-    email: &'a str,
-    sign_in_count: u32,
-}
+// struct User<'a> {
+//     active: bool,
+//     username: &'a str,
+//     email: &'a str,
+//     sign_in_count: u32,
+// }
+// fn area(dimension: (u32, u32)) -> u32 {
+//     dimension.0 * dimension.1
+// }
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
+// fn area(rectangle: &Rectangle) -> u32 {
+//     rectangle.width * rectangle.height
+// }
+
 fn main() {
-    let user1 = User {
-        active: true,
-        username: "a",
-        email: "a@a.com",
-        sign_in_count: 1,
-    };
-    println!("{}", user1.email);
+    // let rect1 = Rectangle {
+    //     width: 30,
+    //     height: 50,
+    // };
+    // println!("{}", area(&rect1));
+    // let user1 = User {
+    //     active: true,
+    //     username: "a",
+    //     email: "a@a.com",
+    //     sign_in_count: 1,
+    // };
+    // println!("{}", user1.email);
     // let user1 = build_user(String::from("a@a.com"), String::from("b"));
     // let user2 = User {
     //     email: String::from("another@a.com"),
